@@ -7,7 +7,7 @@ import 'package:timer_bloc/screens/home_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final String _title = 'Flutter Timer';
+  final String _title = 'Timer Bloc';
 
   @override
   Widget build(BuildContext context) {
