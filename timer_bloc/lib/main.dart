@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider<TimerBloc>(
       builder: (BuildContext context) => TimerBloc(ticker: Ticker()),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primaryColor: Color.fromRGBO(109, 234, 255, 1),
           accentColor: Color.fromRGBO(72, 74, 126, 1),
