@@ -32,7 +32,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
         }
         if (currentState is PostLoaded) {
           final posts = await _fetchPosts(currentState.posts.length, 20);
-          yield posts.isEmpty ? currentState.copyWith(posts: posts, hasReachedMax: true) : PostLoaded(posts: currentState.posts + posts, hasReachedMax: false);
+          yield posts.isEmpty ? currentState.copyWith(hasReachedMax: true) : PostLoaded(posts: currentState.posts + posts, hasReachedMax: false);
         }
       } catch(_) {
         yield PostError();
